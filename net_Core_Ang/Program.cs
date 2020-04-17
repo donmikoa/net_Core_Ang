@@ -21,6 +21,7 @@ namespace net_Core_Ang
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://*:5002");
                 });
     }
 }
