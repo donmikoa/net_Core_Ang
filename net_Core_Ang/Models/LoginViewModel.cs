@@ -1,10 +1,16 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace net_Core_Ang.Models
 {
     public class LoginViewModel
     {
-        public LoginViewModel()
-        {
-        }
+        [Required]
+        [Display(Name ="User Name")]
+        public string Username { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
 }
